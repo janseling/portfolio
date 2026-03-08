@@ -1,7 +1,8 @@
 "use client";
 
-import { Mail, MessageCircle, Github, Linkedin, Send } from "lucide-react";
+import { Mail, MessageCircle, Github, Send } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ export default function ContactPage() {
     // TODO: Implement contact form submission
     console.log("Form submitted:", formData);
     alert("Thanks for reaching out! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: message: "" });
   };
 
   return (
@@ -31,35 +32,39 @@ export default function ContactPage() {
 
         {/* Contact Methods */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <a
-            href="https://t.me/your_username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-blue-500 transition-colors duration-200 text-center group"
-          >
-            <MessageCircle className="w-12 h-12 mx-auto mb-4 text-blue-400 group-hover:scale-110 transition-transform" />
-            <h3 className="font-semibold mb-2">Telegram</h3>
-            <p className="text-gray-400 text-sm">@your_username</p>
-          </a>
+          <div className="p-6 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-green-500 transition-colors duration-200 text-center group">
+            <MessageCircle className="w-12 h-12 mx-auto mb-4 text-green-400 group-hover:scale-110 transition-transform" />
+            <h3 className="font-semibold mb-2">WeChat</h3>
+            <p className="text-gray-400 text-sm mb-3">Scan QR Code</p>
+            <div className="w-32 h-32 mx-auto bg-white rounded-lg p-2">
+              <Image
+                src="/wechat-qr.png"
+                alt="WeChat QR Code"
+                width={128}
+                height={128}
+                className="w-full h-full"
+              />
+            </div>
+          </div>
 
           <a
-            href="mailto:your@email.com"
+            href="mailto:janseling@163.com"
             className="p-6 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-purple-500 transition-colors duration-200 text-center group"
           >
             <Mail className="w-12 h-12 mx-auto mb-4 text-purple-400 group-hover:scale-110 transition-transform" />
             <h3 className="font-semibold mb-2">Email</h3>
-            <p className="text-gray-400 text-sm">your@email.com</p>
+            <p className="text-gray-400 text-sm">janseling@163.com</p>
           </a>
 
           <a
-            href="https://github.com/your_username"
+            href="https://github.com/janseling"
             target="_blank"
             rel="noopener noreferrer"
             className="p-6 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500 transition-colors duration-200 text-center group"
           >
             <Github className="w-12 h-12 mx-auto mb-4 text-pink-400 group-hover:scale-110 transition-transform" />
             <h3 className="font-semibold mb-2">GitHub</h3>
-            <p className="text-gray-400 text-sm">@your_username</p>
+            <p className="text-gray-400 text-sm">@janseling</p>
           </a>
         </div>
 
