@@ -2,7 +2,6 @@
 
 import { Mail, MessageCircle, Github, Send } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -37,7 +36,7 @@ export default function ContactPage() {
             <h3 className="font-semibold mb-2">WeChat</h3>
             <p className="text-gray-400 text-sm mb-3">Scan QR Code</p>
             <div className="w-32 h-32 mx-auto bg-white rounded-lg p-2">
-              <Image
+              <img
                 src="/wechat-qr.png"
                 alt="WeChat QR Code"
                 width={128}
