@@ -37,7 +37,7 @@ export default function ContactPage() {
             <p className="text-gray-400 text-sm mb-3">Scan QR Code</p>
             <div className="w-32 h-32 mx-auto bg-white rounded-lg p-2">
               <img
-                src="/wechat-qr.png"
+                src="/portfolio/wechat-qr.png"
                 alt="WeChat QR Code"
                 width={128}
                 height={128}
