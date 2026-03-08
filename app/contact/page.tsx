@@ -16,7 +16,7 @@ export default function ContactPage() {
     // TODO: Implement contact form submission
     console.log("Form submitted:", formData);
     alert("Thanks for reaching out! I'll get back to you soon.");
-    setFormData({ name: "", email: message: "" });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
