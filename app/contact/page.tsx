@@ -48,12 +48,12 @@ export default function ContactPage() {
           </div>
 
           <a
-            href="mailto:janseling@163.com"
+            href="mailto:janseling@gmail.com"
             className="p-6 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-purple-500 transition-colors duration-200 text-center group"
           >
             <Mail className="w-12 h-12 mx-auto mb-4 text-purple-400 group-hover:scale-110 transition-transform" />
             <h3 className="font-semibold mb-2">Email</h3>
-            <p className="text-gray-400 text-sm">janseling@163.com</p>
+            <p className="text-gray-400 text-sm">janseling@gmail.com</p>
           </a>
 
           <a
